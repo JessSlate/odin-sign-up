@@ -1,0 +1,79 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    margin: 0;
+    background-color: mintcream;
+    
+}
+
+div{
+    display: flex;
+}
+
+div#splash{
+    /*one of the TOP lessons has min ideal max for width*/
+    max-width: 33vw;
+    min-width: 33%;
+    background-color: green;
+    background-image: url(./20221201_141449.jpg);
+    background-size: auto;
+    background-position-y: center bottom;
+}
+
+div#main-content{
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+}
+
+div#upper{
+    min-height: 33vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#upper h1{
+    max-width: 80%;
+}
+
+
+form{
+    display: flex;
+    flex-flow: row wrap;
+    box-shadow: 10px 5px 5px #bbb;
+    padding: 1em;
+    background-color: white;
+}
+form h2{
+    width: 100%;
+}
+
+form p{
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+
+form input{
+    max-width: 80%;
+}
+
+div#lower{
+    max-height: 33%;
+    width: 100%;
+}
+#lower label{
+    border: 2px solid black;
+    padding: .5em 1em;
+}
+input#submit{
+    display: none;
+
+}
