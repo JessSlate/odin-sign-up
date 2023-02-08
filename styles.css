@@ -1,10 +1,36 @@
+@font-face {
+    font-family: 'timelessregular';
+    src: url('./fonts/timeless-webfont.woff2') format('woff2'),
+         url('./fonts/timeless-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: gravitybook;
+    src: url('./fonts/gravity-book-webfont.woff2') format('woff2'),
+         url('./fonts/gravity-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html{
     height: 100%;
     margin: 0;
     padding: 0;
 }
+/*
+@media screen and (max-width: 1155px){
+    body{
+        flex-direction: column;
+    }
+}
+switch to mobile below 1155px width*/
 
 body {
+    font-family: gravitybook, Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
     min-height: 100%;
@@ -23,29 +49,29 @@ div#splash{
     max-width: 33vw;
     min-width: 33%;
     background-color: #B4C44A;
-    background: url(./20221201_141449.jpg) center center;
+    background: url(./imgs/20221201_141449.jpg) center center;
     background-size:cover;
 }
 
 #splash div{
     background-color: rgba(25, 25, 25, .50);
     width: 100%;
-    max-height: 200px;
+    max-height: 3em;
     position: relative;
-    top: 25%;
+    top: 22%;
     color: white;
 }
 div#logo{
+    font-family: 'timelessregular', 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: .25em;
     font-size: 3em;
-    font-variant: small-caps;
+    padding: .2em 0;
 }
 div#logo img{
-
-    height: 200px;
+    height: 3em;
     width: auto;
 }
 
@@ -62,47 +88,72 @@ div#upper{
 }
 
 #upper h1{
-    max-width: 80%;
+    margin-top: auto;
+    font-size: 1.5em;
+    max-width: 60%;
 }
 
-
+div#upper,
+div#lower{
+    margin-left: 1.5em;
+}
 form{
     /*color: #f4fdff;*/
     display: flex;
     flex-flow: row wrap;
     box-shadow: 10px 5px 5px #5A7B8E;
-    padding: 1em;
+    padding: 1em 2.5em;
     background-color: #9fd9eb;
 }
 form h2{
+    margin-top: 0;
     width: 100%;
 }
 
 form p{
     display: flex;
-    width: 45%;
     flex-direction: column;
+    min-width: 25%;
+    margin-right: 10%;
+}
+
+form p:nth-of-type(even){
+    margin-right: 40%;
 }
 
 form input{
     margin-top: .5em;
-    max-width: 80%;
-    border-radius: .5em;
-    height: 1.5em;
+    border-radius: 5px;
+    height: 1.75em;
+    background-color: #d6ecf3;
+    border: 2px groove #5A7B8E;
 }
 
 div#lower{
-    flex-direction: column;
+    flex-flow: column wrap;
     padding: 1em;
+    font-weight: bold;
+    
 }
 #lower label{
     color: #2b2509;
-    font-size: 1.5em;
-    border: 2px solid #514924;
-    padding: .75em 2em;
+    border: 2px outset #514924;
+    padding: .75em 2.5em;
     border-radius: .5em;
     background-color: #B4C44A;
 }
+#lower label:hover{
+    text-decoration: underline;
+}
+
+a{
+    color:#214b64;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
 input#submit{
     display: none;
 
