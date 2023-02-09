@@ -111,7 +111,7 @@ form h2{
     width: 100%;
 }
 
-form p{
+form div{
     display: flex;
     flex-direction: column;
     margin: 1em 5% .5em 0;
@@ -120,12 +120,8 @@ form p{
     min-width: 175.75px;
 }
 
-form p:nth-of-type(even){
+form div:nth-of-type(even){
     margin-right: 35%;
-    /*
-    width: 25%;
-    min-width: 175.75px;
-*/
 }
 
 form input{
