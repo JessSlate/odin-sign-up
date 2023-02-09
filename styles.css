@@ -34,6 +34,7 @@ body {
     display: flex;
     flex-direction: row;
     min-height: 100%;
+    min-width: 350px;
     margin: 0;
     background-color: #d6ecf3;
     color: #1f323d;
@@ -113,12 +114,18 @@ form h2{
 form p{
     display: flex;
     flex-direction: column;
-    min-width: 25%;
-    margin-right: 10%;
+    margin: 1em 5% .5em 0;
+
+    width: 25%;
+    min-width: 175.75px;
 }
 
 form p:nth-of-type(even){
-    margin-right: 40%;
+    margin-right: 35%;
+    /*
+    width: 25%;
+    min-width: 175.75px;
+*/
 }
 
 form input{
@@ -127,6 +134,27 @@ form input{
     height: 1.75em;
     background-color: #d6ecf3;
     border: 2px groove #5A7B8E;
+}
+
+form input:focus{
+    background-color: rgb(250, 245, 215);
+    
+}
+
+form span{
+    min-height: 1em;
+}
+form > span{
+    width: 100%;
+}
+
+p.error input{
+    background-color: rgb(255, 210, 210);
+    border: 2px groove rgb(250, 105, 105);
+    box-shadow: 0 0 8px red;
+}
+p.error label{
+    color:  rgb(143, 0, 0);;
 }
 
 div#lower{
@@ -141,9 +169,22 @@ div#lower{
     padding: .75em 2.5em;
     border-radius: .5em;
     background-color: #B4C44A;
+
+    box-shadow: 5px 2.5px 2.5px #5A7B8E;
 }
-#lower label:hover{
-    text-decoration: underline;
+
+/* see https://brianshim.com/webtricks/make-html-tag-selectable-using-tab-accessibility/ to make this 'clickable' with keyboard */
+#lower label:hover,
+#lower label:focus{
+    background-color: #d7eb5a;
+    cursor: pointer;
+    
+}
+
+
+input#submit{
+    display: none;
+
 }
 
 a{
@@ -154,7 +195,3 @@ a:hover{
     text-decoration: underline;
 }
 
-input#submit{
-    display: none;
-
-}
