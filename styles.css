@@ -144,12 +144,12 @@ form > span{
     width: 100%;
 }
 
-p.error input{
+div.error input{
     background-color: rgb(255, 210, 210);
     border: 2px groove rgb(250, 105, 105);
     box-shadow: 0 0 8px red;
 }
-p.error label{
+div.error label{
     color:  rgb(143, 0, 0);;
 }
 
